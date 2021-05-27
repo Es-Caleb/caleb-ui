@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "caleb-icons"; /* Project id 2572950 */
+  src: url('iconfont.woff2?t=1622098783842') format('woff2'),
+      url('iconfont.woff?t=1622098783842') format('woff'),
+      url('iconfont.ttf?t=1622098783842') format('truetype');
+}
+
+[class^="ca-icon-"], [class*=" ca-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'caleb-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ca-icon-loading:before {
+  content: "\e756";
+}
+
+.ca-icon-loading {
+  animation: rotating 2s linear infinite;
+}
+
+.ca-icon-add:before {
+  content: "\e664";
+}
+
+.ca-icon-add-circle:before {
+  content: "\e665";
+}
+
+.ca-icon-arrow-down:before {
+  content: "\e666";
+}
+
+.ca-icon-arrow-right:before {
+  content: "\e667";
+}
+
+.ca-icon-close:before {
+  content: "\e668";
+}
+
+.ca-icon-customer-service:before {
+  content: "\e66a";
+}
+
+.ca-icon-delete:before {
+  content: "\e66b";
+}
+
+.ca-icon-direction-right:before {
+  content: "\e66c";
+}
+
+.ca-icon-direction-left:before {
+  content: "\e66d";
+}
+
+.ca-icon-search:before {
+  content: "\e67d";
+}
+
+.ca-icon-share:before {
+  content: "\e67e";
+}
+
+.ca-icon-scanning:before {
+  content: "\e67f";
+}
+
+.ca-icon-user:before {
+  content: "\e682";
+}
+
+.ca-icon-arrow-left-bold:before {
+  content: "\e685";
+}
+
+.ca-icon-arrow-up-bold:before {
+  content: "\e686";
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
