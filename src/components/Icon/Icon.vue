@@ -71,7 +71,6 @@
 .icons {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 300px;
 }
 .icons-box {
   width: 16%;

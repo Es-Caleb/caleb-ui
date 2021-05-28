@@ -1,31 +1,67 @@
 <template>
-  <h4>基础</h4>
+  <h3 class="title-box">基础</h3>
   <ca-button @click="goAbout">默认按钮(点击跳转about页面)</ca-button>
-  <ca-button theme="primary">主要按钮</ca-button>
-  <ca-button theme="success">成功按钮</ca-button>
-  <ca-button theme="warning">警告按钮</ca-button>
-  <ca-button theme="info">信息按钮</ca-button>
-  <ca-button theme="danger">危险按钮</ca-button>
-  <ca-button theme="text">文字按钮</ca-button>
-  <h4>大小</h4>
-  <ca-button>默认按钮</ca-button>
-  <ca-button size="medium">中等按钮</ca-button>
-  <ca-button size="small">小型按钮</ca-button>
-  <ca-button size="mini">超小按钮</ca-button>
-  <h4>圆角</h4>
-  <ca-button theme="primary" round>主要按钮</ca-button>
-  <ca-button size="mini" round>超小按钮</ca-button>
-  <h4>加载中</h4>
-  <ca-button loading>默认按钮</ca-button>
-  <ca-button theme="primary" loading>主要按钮</ca-button>
+  <ca-button type="primary">主要按钮</ca-button>
+  <ca-button type="dashed">虚线按钮</ca-button>
+  <ca-button type="text">文字按钮</ca-button>
+  <ca-button type="link">链接按钮</ca-button>
 
-  <h4>禁用</h4>
+  <h3 class="title-box">大小</h3>
+  <ca-button type="primary" size="large">主要按钮</ca-button>
+  <ca-button>默认按钮</ca-button>
+  <ca-button type="dashed" size="small">虚线按钮</ca-button>
+
+  <h3 class="title-box">圆角</h3>
+  <ca-button type="primary" size="large" round>主要按钮</ca-button>
+  <ca-button round>默认按钮</ca-button>
+  <ca-button type="dashed" size="small" round>虚线按钮</ca-button>
+
+  <h3 class="title-box">幽灵按钮（背景透明）</h3>
+  <div class="button-back">
+    <ca-button type="primary" ghost>主要按钮</ca-button>
+    <ca-button ghost>默认按钮</ca-button>
+    <ca-button type="dashed" ghost>虚线按钮</ca-button>
+  </div>
+
+  <h3 class="title-box">block按钮(适合其父宽度)</h3>
+  <ca-button block>默认按钮</ca-button>
+  <ca-button type="primary" block>主要按钮</ca-button>
+  <ca-button type="dashed" block>虚线按钮</ca-button>
+  <ca-button type="text" block>文字按钮</ca-button>
+  <ca-button type="link" block>链接按钮</ca-button>
+
+  <h3 class="title-box">危险按钮</h3>
+  <ca-button type="primary" danger>主要按钮</ca-button>
+  <ca-button danger>默认按钮</ca-button>
+  <ca-button type="dashed" danger>虚线按钮</ca-button>
+  <ca-button type="text" danger>文字按钮</ca-button>
+  <ca-button type="link" danger>链接按钮</ca-button>
+
+  <h3 class="title-box">禁用</h3>
+  <ca-button type="primary" disabled>主要按钮</ca-button>
   <ca-button disabled>默认按钮</ca-button>
-  <ca-button theme="success" @click="goAbout" round disabled>成功按钮</ca-button>
-  <ca-button theme="warning" disabled>警告按钮</ca-button>
-  <ca-button theme="info" disabled>信息按钮</ca-button>
-  <ca-button theme="danger" disabled>危险按钮</ca-button>
-  <ca-button theme="text" disabled>文字按钮</ca-button>
+  <ca-button type="dashed" disabled>虚线按钮</ca-button>
+  <ca-button type="text" disabled>文字按钮</ca-button>
+  <ca-button type="link" disabled>链接按钮</ca-button>
+  <div class="button-back">
+    <ca-button disabled ghost>默认按钮</ca-button>
+  </div>
+
+  <h3 class="title-box">加载中</h3>
+  <ca-button type="primary" @click="Runloading">主要按钮</ca-button>
+  <ca-button :loading="loading">默认按钮</ca-button>
+  <ca-button type="dashed" loading>虚线按钮</ca-button>
+
+  <h3 class="title-box">icon</h3>
+  <ca-button icon="ca-icon-add">默认按钮</ca-button>
+  <ca-button type="primary" icon="ca-icon-add"></ca-button>
+  <ca-button type="primary" icon="ca-icon-add" size="large"></ca-button>
+  <ca-button type="primary" icon="ca-icon-add" size="small"></ca-button>
+  <ca-button type="primary" icon="ca-icon-add" round></ca-button>
+  <ca-button type="primary" icon="ca-icon-add" size="large" round></ca-button>
+  <ca-button type="primary" icon="ca-icon-add" size="small" round></ca-button>
+  <ca-button type="primary">司法发生<i class="ca-icon-add ca-button-iconRight"></i></ca-button>
+
 </template>
 
 <script lang="ts">
@@ -34,13 +70,29 @@ export default ({
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   setup () {
     const router = useRouter()
-    // eslint-disable-next-line
+    let loading = false
     function goAbout () {
       router.push('/about')
     }
+    function Runloading () {
+      console.log(loading, '33')
+      loading = true
+    }
     return {
-      goAbout
+      goAbout,
+      Runloading,
+      loading
     }
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.title-box {
+  padding: 20px 0 10px;
+}
+.button-back {
+  padding: 8px 8px 0;
+  background: rgb(190, 200, 200);
+}
+</style>

@@ -2,8 +2,8 @@
   <div id="nav">
     <!-- <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> -->
+    <router-view/>
   </div>
-  <router-view/>
 </template>
 
 <style lang="scss">
@@ -16,7 +16,7 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 100px;
 
   a {
     font-weight: bold;
@@ -26,5 +26,9 @@
       color: #42b983;
     }
   }
+}
+article, aside, blockquote, body, button, code, dd, details, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
 }
 </style>

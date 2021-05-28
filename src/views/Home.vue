@@ -1,8 +1,9 @@
 <template>
   <div class="home">
-    <h3>icon组件</h3>
+    <h2>icon组件</h2>
     <Icon />
-    <h3>button组件</h3>
+
+    <h2>button组件</h2>
     <Button />
   </div>
 </template>
