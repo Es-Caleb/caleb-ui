@@ -66,15 +66,15 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-
+import { useRouter } from 'vue-router'
 @Options({
-  data () {
+  data() {
     return {
       loaded: false
     }
   },
   methods: {
-    runLoading ():void {
+    runLoading(): void {
       this.loaded = true
       setTimeout(() => {
         this.loaded = false
@@ -82,7 +82,19 @@ import { Options, Vue } from 'vue-class-component'
     }
   }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  setup(): {
+    goAbout: () => void
+    } {
+    const router = useRouter()
+    const goAbout = () => {
+      router.push('/about')
+    }
+    return {
+      goAbout
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
