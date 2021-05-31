@@ -48,8 +48,8 @@
   </div>
 
   <h3 class="title-box">加载中</h3>
-  <ca-button type="primary" @click="Runloading">主要按钮</ca-button>
-  <ca-button :loading="loading">默认按钮</ca-button>
+  <ca-button type="primary" @click="runLoading">主要按钮</ca-button>
+  <ca-button :loading="loaded">默认按钮</ca-button>
   <ca-button type="dashed" loading>虚线按钮</ca-button>
 
   <h3 class="title-box">icon</h3>
@@ -65,26 +65,24 @@
 </template>
 
 <script lang="ts">
-import { useRouter } from 'vue-router'
-export default ({
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-  setup () {
-    const router = useRouter()
-    let loading = false
-    function goAbout () {
-      router.push('/about')
-    }
-    function Runloading () {
-      console.log(loading, '33')
-      loading = true
-    }
+import { Options, Vue } from 'vue-class-component'
+
+@Options({
+  data () {
     return {
-      goAbout,
-      Runloading,
-      loading
+      loaded: false
+    }
+  },
+  methods: {
+    runLoading ():void {
+      this.loaded = true
+      setTimeout(() => {
+        this.loaded = false
+      }, 1000)
     }
   }
 })
+export default class App extends Vue {}
 </script>
 
 <style lang="scss" scoped>
