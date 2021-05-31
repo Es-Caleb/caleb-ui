@@ -65,34 +65,19 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
-import { useRouter } from 'vue-router'
-@Options({
-  data() {
-    return {
-      loaded: false
-    }
-  },
-  methods: {
-    runLoading(): void {
-      this.loaded = true
-      setTimeout(() => {
-        this.loaded = false
-      }, 1000)
-    }
-  }
-})
+import { Vue } from 'vue-class-component'
+
 export default class App extends Vue {
-  setup(): {
-    goAbout: () => void
-    } {
-    const router = useRouter()
-    const goAbout = () => {
-      router.push('/about')
-    }
-    return {
-      goAbout
-    }
+  loaded = false
+  public runLoading(): void {
+    this.loaded = true
+    setTimeout(() => {
+      this.loaded = false
+    }, 1000)
+  }
+
+  public goAbout() {
+    this.$router.push('/about')
   }
 }
 </script>
