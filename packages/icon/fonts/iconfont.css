@@ -22,11 +22,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ca-icon-gengxin:before {
+  content: "\e619";
+}
+
 .ca-icon-loading:before {
   content: "\e756";
 }
 
-.ca-icon-loading {
+.ca-icon-loading, .ca-icon-gengxin {
   animation: rotating 2s linear infinite;
 }
 

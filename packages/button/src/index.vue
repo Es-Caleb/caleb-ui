@@ -1,6 +1,5 @@
 <template>
   <button
-    class="ca-button"
     @click="onClick"
     :disabled="disabled || loading"
     :class="PrefixName + '-button ' + classes"
@@ -45,20 +44,20 @@ export default {
     disabled: Boolean
   },
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-  data () {
+  data() {
     return {
       PrefixName: PrefixName
     }
   },
   methods: {
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-    onClick (evt) {
+    onClick(evt) {
       this.$emit('click', evt)
     }
   },
   computed: {
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-    classes () {
+    classes() {
       // 是否显示加载中
       const loadingClass = this.loading ? ' loading' : ''
       // 是否为圆角

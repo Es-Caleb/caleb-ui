@@ -64,6 +64,10 @@
       <i class="ca-icon-loading"></i>
       <div class="icons-name">ca-icon-loading</div>
     </div>
+    <div class="icons-box">
+      <i class="ca-icon-gengxin"></i>
+      <div class="icons-name">ca-icon-gengxin</div>
+    </div>
   </div>
 </template>
 

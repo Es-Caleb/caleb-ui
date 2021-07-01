@@ -1,6 +1,6 @@
 <template>
   <h3 class="title-box">基础</h3>
-  <ca-button @click="goAbout">默认按钮(点击跳转about页面)</ca-button>
+  <ca-button @click="goAbout()">默认按钮(点击跳转about页面)</ca-button>
   <ca-button type="primary">主要按钮</ca-button>
   <ca-button type="dashed">虚线按钮</ca-button>
   <ca-button type="text">文字按钮</ca-button>
@@ -76,7 +76,7 @@ export default class App extends Vue {
     }, 1000)
   }
 
-  public goAbout() {
+  public goAbout(): void {
     this.$router.push('/about')
   }
 }
