@@ -1,0 +1,9 @@
+.ca-zoom-in-center-enter-active,
+.ca-zoom-in-center-leave-active {
+  transition: all .3s cubic-bezier(.55,0,.1,1);
+}
+.ca-zoom-in-center-enter,
+.ca-zoom-in-center-leave-active {
+  opacity: 0;
+  transform: scaleX(0);
+}
