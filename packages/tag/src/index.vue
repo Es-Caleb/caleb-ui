@@ -1,5 +1,6 @@
 <template>
   <span :class="'ca-tag' + classes" :style="{background: presetColorTypes(color) ? '' : color}">
+    <i :class="icon + ' ca-tag-icon'" v-if="icon"></i>
     <slot />
     <i v-if="closable" class="ca-icon-close ca-tag-close" @click="handleClose"></i>
   </span>
@@ -21,7 +22,9 @@ export default {
     closable: {
       type: Boolean,
       default: false
-    }
+    },
+    icon: String,
+    size: String
   },
   methods: {
     handleClose(event) {
@@ -56,7 +59,8 @@ export default {
     classes() {
       const colorClass = this.color === '' ? '' : this.presetColorTypes(this.color) ? ' ca-tag-' + this.color : ' ca-tag-has-color'
       const typeClass = this.type ? ' ca-tag-' + this.type : ''
-      return `${typeClass}${colorClass}`
+      const sizeClass = this.size ? ' ca-tag-' + this.size : ''
+      return `${typeClass}${colorClass}${sizeClass}`
     }
   }
 }

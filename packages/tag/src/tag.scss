@@ -1,5 +1,11 @@
 @import '../../styles//transition.scss';
 
+[class*=ca-tag]+a {
+  display: inline-block;
+  margin: 0 -8px;
+  padding: 0 8px;
+}
+
 .ca-tag {
   box-sizing: border-box;
   margin: 0 8px 0 0;
@@ -19,12 +25,11 @@
   opacity: 1;
   transition: all .3s;
 
-  a {
-    display: inline-block;
-    margin: 0 -8px;
-    padding: 0 8px;
+  .ca-tag-icon {
+    margin-right: 5px;
   }
 
+  // close
   .ca-tag-close {
     margin-left: 3px;
     color: #8a8a8a;
@@ -34,6 +39,7 @@
     }
   }
 
+  // type
   &.ca-tag-success {
     color: #52c41a;
     background: #f6ffed;
@@ -58,6 +64,7 @@
     border-color: #ffd591;
   }
 
+  // color
   &.ca-tag-magenta {
     color: #c41d7f;
     background: #fff0f6;
@@ -127,6 +134,22 @@
   &.ca-tag-has-color {
     color: #FFFFFF;
     border-color: transparent;
+  }
+
+  // size
+  &.ca-tag-big {
+    line-height: 32px;
+    padding: 0 10px;
+  }
+
+  &.ca-tag-medium {
+    line-height: 28px;
+    padding: 0 10px;
+  }
+
+  &.ca-tag-small {
+    line-height: 24px;
+    padding: 0 8px;
   }
 
 }
