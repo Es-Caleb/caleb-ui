@@ -22,6 +22,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ca-icon-minus:before {
+  content: "\e771";
+}
+
+.ca-icon-view-on:before {
+  content: "\e62f";
+}
+
+.ca-icon-view-off:before {
+  content: "\e630";
+}
+
 .ca-icon-gengxin:before {
   content: "\e619";
 }

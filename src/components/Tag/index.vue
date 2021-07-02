@@ -41,11 +41,20 @@
 
   <h3 style="padding: 10px 0">icon</h3>
   <div>
-    <ca-tag closable>如果我是说如果如果感到幸福你就拍拍手</ca-tag>
-    <ca-tag type="success">success</ca-tag>
-    <ca-tag type="processing">processing</ca-tag>
-    <ca-tag type="error">error</ca-tag>
-    <ca-tag type="warning">warning</ca-tag>
+    <ca-tag icon="ca-icon-search" closable>如果我是说如果如果感到幸福你就拍拍手</ca-tag>
+    <ca-tag icon="ca-icon-gengxin" type="success">success</ca-tag>
+    <ca-tag icon="ca-icon-gengxin" type="processing">processing</ca-tag>
+    <ca-tag icon="ca-icon-gengxin" type="error">error</ca-tag>
+    <ca-tag icon="ca-icon-gengxin" type="warning">warning</ca-tag>
+  </div>
+
+  <h3 style="padding: 10px 0">size</h3>
+  <div>
+    <ca-tag size="big">超大标签</ca-tag>
+    <ca-tag size="medium" color="cyan">中等标签</ca-tag>
+    <ca-tag size="small" color="cyan">小型标签</ca-tag>
+    <ca-tag color="cyan">默认标签</ca-tag>
+
   </div>
 
 </template>

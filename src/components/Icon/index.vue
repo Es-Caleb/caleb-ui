@@ -5,6 +5,10 @@
       <div class="icons-name">ca-icon-add</div>
     </div>
     <div class="icons-box">
+      <i class="ca-icon-minus"></i>
+      <div class="icons-name">ca-icon-minus</div>
+    </div>
+    <div class="icons-box">
       <i class="ca-icon-add-circle"></i>
       <div class="icons-name">ca-icon-add-circle</div>
     </div>
@@ -67,6 +71,14 @@
     <div class="icons-box">
       <i class="ca-icon-gengxin"></i>
       <div class="icons-name">ca-icon-gengxin</div>
+    </div>
+    <div class="icons-box">
+      <i class="ca-icon-view-on"></i>
+      <div class="icons-name">ca-icon-view-on</div>
+    </div>
+    <div class="icons-box">
+      <i class="ca-icon-view-off"></i>
+      <div class="icons-name">ca-icon-view-off</div>
     </div>
   </div>
 </template>
